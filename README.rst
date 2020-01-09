@@ -1,3 +1,18 @@
+LivTel development experiment.
+
+This is not yet intended for operation use. In general you should be using the master astropy veriosn (astropy/astroscrappy) which is available though pip or astroconda. This version is only for development testing to look at improving the handling of multispec data in frodo. If this works out then we can either fork our local copy or try to get our changes applied back into the astropy/astroscrappy master.
+
+You can pip this development to your test mnachine with the command
+
+  pip install git+https://github.com/LivTel/astroscrappy.git
+
+OR
+
+  pip install git+https://github.com/LivTel/astroscrappy.git@branch_to_install
+
+----
+
+
 Astro-SCRAPPY: The Speedy Cosmic Ray Annihilation Package in Python
 ===================================================================
 

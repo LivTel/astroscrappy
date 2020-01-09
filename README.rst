@@ -8,7 +8,7 @@ You can pip this development to your test mnachine with the command
 
 OR
 
-  pip install git+https://github.com/LivTel/astroscrappy.git@branch_to_install
+  pip install git+https://github.com/LivTel/astroscrappy.git@forFrodo
 
 ----
 

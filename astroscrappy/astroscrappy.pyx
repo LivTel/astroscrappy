@@ -221,7 +221,7 @@ def detect_cosmics(indat, inmask=None, float sigclip=4.5, float sigfrac=0.3,
         elif psfmodel == 'moffat':
             psfk = moffatkernel(psffwhm, psfbeta, psfsize)
         elif psfmodel == 'frodo':
-            k1 = gaussxkernel(psffwhm/2, psfsize)
+            k1 = gaussxkernel(psffwhm/4, psfsize)
             k2 = gaussykernel(psfsize, psfsize)
             psfk = (k1 * k2)
             psfk = psfk / np.sum(psfk)

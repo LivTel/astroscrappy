@@ -114,7 +114,7 @@ def detect_cosmics(indat, inmask=None, float sigclip=4.5, float sigfrac=0.3,
         fine structure image.
         Default: 'median'.
 
-    psfmodel : {'gauss', 'gaussx', 'gaussy', 'moffat'}, optional
+    psfmodel : {'gauss', 'gaussx', 'gaussy', 'moffat', 'frodo'}, optional
         Model to use to generate the psf kernel if fsmode == 'convolve' and
         psfk is None. The current choices are Gaussian and Moffat profiles.
         'gauss' and 'moffat' produce circular PSF kernels. The 'gaussx' and
@@ -217,6 +217,11 @@ def detect_cosmics(indat, inmask=None, float sigclip=4.5, float sigfrac=0.3,
             psfk = gaussykernel(psffwhm, psfsize)
         elif psfmodel == 'moffat':
             psfk = moffatkernel(psffwhm, psfbeta, psfsize)
+        elif psfmodel == 'frodo':
+            k1 = gaussxkernel(psffwhm, psfsize)
+            k2 = gaussykernel(psfsize/2, psfsize)
+            psfk = (k1 * k2)
+            psfk = psfk / np.sum(psfk)
         else:
             raise ValueError('Please choose a supported PSF model.')
 

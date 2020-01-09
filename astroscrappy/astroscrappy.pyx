@@ -355,7 +355,7 @@ def detect_cosmics(indat, inmask=None, float sigclip=4.5, float sigfrac=0.3,
             raise ValueError("""cleantype must be one of the following values:
                             [median, meanmask, medmask, idw]""")
 
-    return (crmask.astype(np.bool), cleanarr)
+    return (crmask.astype(np.bool), cleanarr, kernel)
 
 
 def update_mask(np.ndarray[np.float32_t, ndim=2, mode='c', cast=True] data,

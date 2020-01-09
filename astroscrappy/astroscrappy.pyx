@@ -31,7 +31,7 @@ def detect_cosmics(indat, inmask=None, float sigclip=4.5, float sigfrac=0.3,
                    float objlim=5.0, float gain=1.0, float readnoise=6.5,
                    float satlevel=65536.0, float pssl=0.0, int niter=4,
                    sepmed=True, cleantype='meanmask', fsmode='median',
-                   psfmodel='gauss', float *psffwhm=(2.5,2.5), int psfsize=7,
+                   psfmodel='gauss', float *psffwhm=2.5, int psfsize=7,
                    psfk=None, float psfbeta=4.765, verbose=False):
     """detect_cosmics(indat, inmask=None, sigclip=4.5, sigfrac=0.3, objlim=5.0,
                       gain=1.0, readnoise=6.5, satlevel=65536.0, pssl=0.0,
